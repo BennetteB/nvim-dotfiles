@@ -6,12 +6,12 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- Automatically run :PackerCompile when this file is updated
-vim.cmd([[
+vim.cmd [[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
   augroup end
-]])
+]]
 
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
@@ -32,7 +32,54 @@ packer.startup(function(use)
   -- My plugins here
     -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
+  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
+  -- Colorscheme
+  use 'navarasu/onedark.nvim'
+
+  -- Completion
+  use 'neovim/nvim-lspconfig'
+  use "williamboman/nvim-lsp-installer"
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+
+  -- Snippets
+  use "L3MON4D3/LuaSnip" --snippet engine
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+
+  -- Telescope
+  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/telescope-fzy-native.nvim'
+
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+
+  -- Nvim-tree
+  use {
+      'kyazdani42/nvim-tree.lua',
+      requires = {
+        'kyazdani42/nvim-web-devicons', -- optional, for file icon
+      },
+  }
+
+  -- Null-ls
+  use 'jose-elias-alvarez/null-ls.nvim' 
+
+  --BufferLine
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+
+  -- AutoPairs
+  use "jiangmiao/auto-pairs"
+
+  -- Auto Close Tag
+  use "alvan/vim-closetag"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
