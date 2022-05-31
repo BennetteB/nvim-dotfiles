@@ -1,4 +1,7 @@
 require'nvim-treesitter.configs'.setup {
+  autotag = {
+    enable = true,
+  },
   -- A list of parser names, or "all"
   ensure_installed = { "lua", "javascript"  },
 

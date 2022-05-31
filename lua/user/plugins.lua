@@ -78,9 +78,20 @@ packer.startup(function(use)
   -- AutoPairs
   use "jiangmiao/auto-pairs"
 
-  -- Auto Close Tag
-  use "alvan/vim-closetag"
+  -- Auto Close Tag and Auto Tag Rename
+  use "windwp/nvim-ts-autotag"
 
+    -- Commentary
+   use "tpope/vim-commentary"
+
+   -- Sneak
+   use "justinmk/vim-sneak"
+
+   -- Surround
+   use "tpope/vim-surround"
+
+   -- Easymotion
+   use "easymotion/vim-easymotion"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

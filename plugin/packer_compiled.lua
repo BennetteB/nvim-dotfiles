@@ -139,6 +139,11 @@ _G.packer_plugins = {
     path = "/home/benne/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/home/benne/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/benne/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -174,10 +179,25 @@ _G.packer_plugins = {
     path = "/home/benne/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["vim-closetag"] = {
+  ["vim-commentary"] = {
     loaded = true,
-    path = "/home/benne/.local/share/nvim/site/pack/packer/start/vim-closetag",
-    url = "https://github.com/alvan/vim-closetag"
+    path = "/home/benne/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
+  },
+  ["vim-easymotion"] = {
+    loaded = true,
+    path = "/home/benne/.local/share/nvim/site/pack/packer/start/vim-easymotion",
+    url = "https://github.com/easymotion/vim-easymotion"
+  },
+  ["vim-sneak"] = {
+    loaded = true,
+    path = "/home/benne/.local/share/nvim/site/pack/packer/start/vim-sneak",
+    url = "https://github.com/justinmk/vim-sneak"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/home/benne/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   }
 }
 
