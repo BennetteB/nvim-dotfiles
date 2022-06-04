@@ -55,10 +55,11 @@ keymap("n", "<c-l>", "<cmd>:BufferLineCycleNext<cr>", opts)
 keymap("n", "<c-h>", "<cmd>:BufferLineCyclePrev<cr>", opts)
 keymap("n", "<leader>l", "<cmd>:BufferLineMoveNext<cr>", opts)
 keymap("n", "<leader>h", "<cmd>:BufferLineMovePrev<cr>", opts)
-keymap("n", "<leader>t", "<cmd>:bdelete<cr>", opts)
+keymap("n", "<leader>c", "<cmd>:bdelete<cr>", opts)
 
 -- Helpful keymaps
-keymap("n", "<leader>q", "<cmd>:q<cr>", opts) 
+keymap("n", "<leader>q", "<cmd>:q<cr>", opts)
+keymap("n", "<leader>Q", "<cmd>:q!<cr>", opts)
 keymap("n", "<leader>s", "<cmd>:w<cr>", opts)
 keymap("n", "<leader>H", "<cmd>:split<cr>", opts)
 keymap("n", "<leader>V", "<cmd>:vsplit<cr>", opts)
@@ -77,4 +78,5 @@ keymap("n", "<leader>W", "<Plug>(easymotion-W)", opts)
 keymap("n", "<leader>b", "<Plug>(easymotion-b)", opts)
 keymap("n", "<leader>B", "<Plug>(easymotion-B)", opts)
 
-
+-- ToggleTerm
+keymap("n", "<leader>t", "<cmd>ToggleTerm<cr>", opts)

@@ -14,16 +14,16 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
   reload_on_bufenter = false,
   respect_buf_cwd = false,
   view = {
-    width = 30,
+    width = 25,
     height = 30,
     hide_root_folder = false,
-    side = "left",
+    side = "right",
     preserve_window_proportions = false,
     number = false,
     relativenumber = false,
-    signcolumn = "yes",
+    signcolumn = "no",
     mappings = {
-      custom_only = false,
+      custom_only = true,
       list = {
         -- user mappings go here
           { key = { "<CR>", "l", "<2-LeftMouse>" }, action = "edit" },
@@ -41,7 +41,6 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
           { key = "K",                              action = "first_sibling" },
           { key = "J",                              action = "last_sibling" },
           { key = "I",                              action = "toggle_git_ignored" },
-          { key = "H",                              action = "toggle_dotfiles" },
           { key = "U",                              action = "toggle_custom" },
           { key = "R",                              action = "refresh" },
           { key = "a",                              action = "create" },
